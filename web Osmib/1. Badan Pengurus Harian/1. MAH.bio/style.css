@@ -1,0 +1,172 @@
+/* Pengaturan Dasar */
+body {
+  font-family: "Poppins", sans-serif;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("Alur\ Penerimaan\ Calon\ Anggota\ OSMIB\ -\ Copy\ copy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Animasi Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container Utama dengan Animasi */
+.card {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("Alur\ Penerimaan\ Calon\ Anggota\ OSMIB\ -\ Copy\ copy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 850px; /* Ukuran kotak diperbesar */
+  min-height: 500px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out; /* Memicu animasi masuk */
+}
+
+/* Bagian Kiri (Foto) */
+.photo-section {
+  flex: 1;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("Alur\ Penerimaan\ Calon\ Anggota\ OSMIB\ -\ Copy\ copy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.photo-section img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Efek hover pada foto */
+.photo-section img:hover {
+  transform: scale(1.03);
+}
+
+/* Bagian Kanan (Biodata) */
+.info-section {
+  flex: 1.6;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 0;
+  color: #f8e736;
+  font-size: 2rem;
+  border-bottom: 3px solid #27e820;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+
+.details {
+  display: grid;
+  gap: 15px;
+}
+
+.item {
+  border-bottom: 1px solid #e20e0e;
+  padding-bottom: 8px;
+}
+
+.label {
+  font-weight: bold;
+  color: #19cda0cb;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.value {
+  color: whitesmoke;
+  font-size: 1.1rem;
+}
+
+/* Gaya khusus untuk pandangan OSMIB */
+.osmib-view {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url("Alur\ Penerimaan\ Calon\ Anggota\ OSMIB\ -\ Copy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #f0e817;
+  font-style: italic;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+/* --- RESPONSIVE UNTUK CARD BIODATA --- */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px; /* Memberi jarak agar card tidak menempel ke pinggir layar HP */
+    align-items: flex-start; /* Memudahkan scroll jika konten panjang */
+  }
+
+  .card {
+    flex-direction: column; /* Foto pindah ke atas, info ke bawah */
+    width: 100%; /* Lebar penuh mengikuti layar HP */
+    max-width: 400px; /* Batas lebar maksimal di HP agar tidak terlalu molor */
+    min-height: auto;
+  }
+
+  .photo-section {
+    padding: 20px;
+  }
+
+  .photo-section img {
+    max-height: 300px; /* Perkecil foto sedikit di HP */
+    width: auto;
+  }
+
+  .info-section {
+    padding: 25px; /* Kurangi padding agar teks tidak terlalu sempit */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Perkecil ukuran judul "Biodata Pengurus" */
+    text-align: center;
+    display: block;
+  }
+
+  .value {
+    font-size: 1rem; /* Sesuaikan ukuran teks biodata */
+  }
+}

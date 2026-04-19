@@ -1,0 +1,5 @@
+[[redirects]]
+from = "/*"
+to = "/Osmib.html"
+status = 200
+force = false
